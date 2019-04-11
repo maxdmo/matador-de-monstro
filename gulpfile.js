@@ -11,7 +11,7 @@
 
 // Project configuration
 var project = 'rpg-vue-project', // Project name, used for build zip.
-    url = 'localhost/vuejs2', // Local Development URL for BrowserSync. Change as-needed.
+    url = 'localhost/rpg-vue-project', // Local Development URL for BrowserSync. Change as-needed.
     bower = './assets/bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
     build = './buildtheme/', // Files that you want to package into a zip go here
     buildInclude = [

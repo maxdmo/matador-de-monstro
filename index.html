@@ -3,14 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Matador de Monstro</title>
-	<link rel="stylesheet" type="text/css" href="style.css"><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	
 	<div id="app">
 		
-		
+		  <section class="panel scores">
+		  	
+		  	<div class="score">
+
+		  		<h1>Jogador</h1>
+
+		  		<div class="life-bar">
+		  			<div class="life" :class="{danger: playerLife < 20}" :style="{width: playerLife+'%'}"></div>	
+		  		</div>
+
+		  		<div>{{ playerLife }}%</div>
+
+		  	</div>
+
+		  	<div class="score">
+
+		  		<h1>Monstro</h1>
+
+		  		<div class="life-bar">
+		  			<div class="life" :class="{danger: monsterLife < 20}" :style="{width: monsterLife+'%'}"></div>	
+		  		</div>
+
+		  		<div>{{ monsterLife }}%</div>
+
+		  	</div>
+
+		  </section>
+		  <section class="panel result">2</section>
+		  <section class="panel buttons">3</section>
+		  <section class="panel logs">4</section>
+
 	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 	<script src="app.js"></script>
 </body>
