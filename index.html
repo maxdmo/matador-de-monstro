@@ -36,7 +36,10 @@
 		  	</div>
 
 		  </section>
-		  <section class="panel result">2</section>
+		  <section class="panel result" v-if="hasResult">
+		  	<div class="win" v-if="monsterLife == 0">Você ganhou!!! :)</div>
+		  	<div class="lose" v-else="">Você perdeu! :(</div>
+		  </section>
 		  <section class="panel buttons">3</section>
 		  <section class="panel logs">4</section>
 
