@@ -46,6 +46,7 @@ html {
       height: 100%;
       width: 0;
       background: green;
+      transition: all .5s ease-in-out;
     }
 
     .life.danger {
@@ -67,3 +68,71 @@ html {
   .win {
     color: green;
   }
+
+/* Área dos botões */
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+  .btn {
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  }
+
+    .new-game {
+      background-color: darkblue;
+      color: white;
+    }
+
+    .attack {
+      background-color: darkred;
+      color: white;
+    }
+
+    .special-attack {
+      background-color: darkorange;
+      color: black;
+    }
+
+    .heal {
+      background-color: lightgreen;
+      color: white;
+    }
+
+    .give-up {
+      background-color: gray;
+      color: black;
+    }
+
+/** Área dos logs */
+.logs ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+  .logs ul li {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
+    padding: 3px 0;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: white;
+  }
+
+    .logs ul li.player {
+      background: lightblue;
+    }
+    .logs ul li.monster {
+      background: red;
+    }
+    .logs ul li.heal {
+      background: lightgreen;
+    }

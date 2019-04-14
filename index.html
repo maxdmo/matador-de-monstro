@@ -36,12 +36,35 @@
 		  	</div>
 
 		  </section>
+
 		  <section class="panel result" v-if="hasResult">
+
 		  	<div class="win" v-if="monsterLife == 0">Você ganhou!!! :)</div>
+
 		  	<div class="lose" v-else="">Você perdeu! :(</div>
+
 		  </section>
-		  <section class="panel buttons">3</section>
-		  <section class="panel logs">4</section>
+
+		  <section class="panel buttons">
+
+		  	<template v-if="running">
+		  		<button class="btn attack " @click="attack(false)">Ataque</button>
+				<button class="btn special-attack" @click="attack(true)">Ataque especial</button>
+				<button class="btn heal" @click="healAndHurt()">Curar</button>
+				<button class="btn give-up" @click="running = false">Desistir</button>	
+		  	</template>
+			
+			<button class="btn new-game" v-else @click="startGame">iniciar jogo</button>
+
+		  </section>
+
+		  <section class="panel logs" v-if="logs.length">
+		  	
+		  	<ul>
+		  		<li v-for="log in logs" class="log" :class="log.cls">{{ log.text }}</li>
+		  	</ul>
+
+		  </section>
 
 	</div>
 
